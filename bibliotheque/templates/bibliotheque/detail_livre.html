@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ livre.titre }}</title>
+</head>
+<body>
+    <h1>{{ livre.titre }}</h1>
+    <p>Auteur: {{ livre.auteur }}</p>
+    <p>Date de Publication: {{ livre.date_publication }}</p>
+    <p>ISBN: {{ livre.isbn }}</p>
+    <a href="{% url 'modifier_livre' livre.pk %}">Modifier</a>
+    <a href="{% url 'supprimer_livre' livre.pk %}">Supprimer</a>
+    <a href="{% url 'liste_livres' %}">Retour à la liste</a>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liste des Livres</title>
+</head>
+<body>
+    <h1>Liste des Livres</h1>
+    <a href="{% url 'ajouter_livre' %}">Ajouter un Livre</a>
+    <ul>
+        {% for livre in livres %}
+        <li>
+            <a href="{% url 'detail_livre' livre.pk %}">{{ livre.titre }}</a>
+            <a href="{% url 'modifier_livre' livre.pk %}">Modifier</a>
+            <a href="{% url 'supprimer_livre' livre.pk %}">Supprimer</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
